@@ -7,7 +7,6 @@
 
 <script>
 import BottomBar from "./components/BottomBar.vue";
-
 import Homepage from "./components/Homepage.vue";
 
 export default {
