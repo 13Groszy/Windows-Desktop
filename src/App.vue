@@ -3,14 +3,12 @@
     <Contact />
     <Project-dex />
     <Skills />
-    <Homepage />
     <Bottom-Bar />
   </div>
 </template>
 
 <script>
 import BottomBar from "./components/BottomBar.vue";
-import Homepage from "./components/Homepage.vue";
 import Contact from "./components/Contact.vue";
 import ProjectDex from "./components/ProjectDex.vue";
 import Skills from "./components/Skills";
@@ -18,7 +16,6 @@ import Skills from "./components/Skills";
 export default {
   name: "App",
   components: {
-    Homepage,
     BottomBar,
     Contact,
     ProjectDex,
@@ -29,11 +26,17 @@ export default {
 
 <style>
 body {
+  background: url("./assets/homepage.jpg") no-repeat center center fixed;
+  background-size: 90%;
   overflow: hidden;
   margin: 0;
   padding: 0;
   background-color: black;
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 5fr 5fr;
 }
+img {
+  position: absolute;
+}
+
 </style>
