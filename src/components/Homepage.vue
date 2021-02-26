@@ -11,11 +11,12 @@ export default {
 </script>
 <style scoped>
 img {
-  border: 2px solid#ddd;
-  border-radius: 10px;
   display: block;
   margin: auto;
   padding: 0;
-  width: 49%;
+  width: 95%;
+  min-height: 30%;
+  max-height: 50%;
+  background-color: black;
 }
 </style>
