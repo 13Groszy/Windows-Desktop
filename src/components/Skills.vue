@@ -4,6 +4,10 @@
       <p>Skills</p>
       <div   v-if="this.skill != 0">
         <img class="modal" src="../assets/modal.png" @click="skill--">
+        <p id="modalP" @click="contact--">
+        Prepare for Pokem! Make it Ipsum! To protect the world from devastation!
+        To unite all peoples within our nation!
+      </p>
       </div>
     </div>
 </template>
@@ -53,5 +57,16 @@ p {
   left: 30px;
   top: -20px;
   position: relative;
+}
+#modalP {
+  color: white;
+  width: 40%;
+  max-width: 400px;
+  height: 50%;
+  left: 15%;
+  text-align: justify;
+  position: fixed;
+  top: 45%;
+  font-size: 20;
 }
 </style>
