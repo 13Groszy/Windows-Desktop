@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <Contact />
     <Project-dex />
     <Skills />
+    <Contact />
+    <RecycleBin />
     <Bottom-Bar />
   </div>
 </template>
@@ -11,7 +12,8 @@
 import BottomBar from "./components/BottomBar.vue";
 import Contact from "./components/Contact.vue";
 import ProjectDex from "./components/ProjectDex.vue";
-import Skills from "./components/Skills";
+import Skills from "./components/Skills.vue";
+import RecycleBin from "./components/RecycleBin.vue";
 
 export default {
   name: "App",
@@ -20,6 +22,16 @@ export default {
     Contact,
     ProjectDex,
     Skills,
+    RecycleBin,
+  },
+  data: function () {
+    return {
+      bar: 0,
+      contact: 0,
+      skill: 0,
+      dex: 0,
+      aboutme: 0,
+    };
   },
 };
 </script>
@@ -32,11 +44,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
-  display: grid;
-  grid-template-columns: 5fr 5fr;
 }
 img {
   position: absolute;
 }
-
 </style>

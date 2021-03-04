@@ -1,8 +1,9 @@
 <template lang="">
     <div id="ProjectDex">
-      <img src="../assets/ProjectDexLogo.png" @click="skill = 1">
-      <div v-if="this.skill != 0">
-        <img  class="modal" src="../assets/modal3.png" @click="skill--">
+      <img src="../assets/ProjectDexLogo.png" @click="dex = 1">
+      <p>Project Dex</p>
+      <div v-if="this.dex != 0">
+        <img  class="modal" src="../assets/modal3.png" @click="dex--">
       </div>
     </div>
 </template>
@@ -12,7 +13,7 @@ export default {
   components: {},
   data: function () {
     return {
-      skill: 0,
+      dex: 0,
     };
   },
 };
@@ -23,13 +24,11 @@ img {
   height: 70px;
   width: 70px;
   bottom: 60%;
-  left: 10px;
+  left: 20px;
+  position: relative;
 }
 img:hover {
-  height: 75px;
-  width: 75px;
-  left: 10px;
-  bottom: 59.5%;
+  opacity: 0.8;
 }
 .modal {
   width: 50%;
@@ -38,11 +37,21 @@ img:hover {
   left: 10%;
   border: 2px solid #f0f8ff;
   border-radius: 50px;
+  position: fixed;
 }
 .modal:hover {
   width: 51%;
   height: 51%;
   bottom: 24%;
   left: 9.5%;
+  opacity: 1;
+}
+p {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  left: 7px;
+  top: -20px;
+  position: relative;
 }
 </style>
