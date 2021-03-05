@@ -2,7 +2,7 @@
 <div id="BottomBar">
   <img src="../assets/winlogo.png" @click="bar = 1" >
   <form action="https://www.google.com/search"  method="get"  target="_blank">
-    <input  name="q" placeholder="Search in google" type="text">
+    <input  name="q" placeholder="Search in Google" type="text">
   </form>
   <div class="container" v-if="this.bar != 0">
     <div class="LeftBar"></div>

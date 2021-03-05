@@ -28,6 +28,9 @@ export default {
 </script>
 
 <style>
+* {
+  cursor: default;
+}
 body {
   background: url("./assets/homepage.jpg") no-repeat center center fixed;
   background-size: 90%;
