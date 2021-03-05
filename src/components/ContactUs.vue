@@ -4,10 +4,13 @@
     <p>Contact Me</p>
     <div v-if="this.contact != 0" class="container">
       <form @submit.prevent="sendEmail">
-        <p>
-          If you are happy to contact me, use the form below and I promise to
-          response as soon as possible.
-        </p>
+        <div>
+          <img class="exit" src="../assets/xbutton.png" @click="contact = 0" />
+          <p>
+            If you are happy to contact me, use the form below and I promise to
+            response as soon as possible.
+          </p>
+        </div>
         <label>Your name</label>
         <input
           type="text"
@@ -15,6 +18,7 @@
           name="name"
           placeholder="Your Name"
           maxlength="20"
+          minlength="3"
         />
         <label>Email</label>
         <input
@@ -23,6 +27,7 @@
           name="email"
           placeholder="Your Email"
           maxlength="50"
+          minlength="3"
         />
         <label>Message</label>
         <textarea
@@ -32,6 +37,7 @@
           rows="5"
           placeholder="Message"
           maxlength="1000"
+          minlength="3"
         >
         </textarea>
 
@@ -81,6 +87,7 @@ export default {
 <style scoped>
 * {
   box-sizing: border-box;
+  z-index: 3;
 }
 label {
   float: left;
@@ -98,7 +105,7 @@ textarea {
   resize: vertical;
 }
 input[type="submit"] {
-  background-color: #4caf50;
+  background-color: #2bae66ff;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -106,19 +113,20 @@ input[type="submit"] {
   cursor: pointer;
 }
 input[type="submit"]:hover {
-  background-color: #b8c7b9;
+  background-color: #195190ff;
 }
 .container {
   display: block;
   margin: auto;
   text-align: center;
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #a2a2a1ff;
   padding: 20px;
   width: 50%;
   bottom: 25%;
   position: absolute;
   left: 25%;
+  min-width: 400px;
 }
 img {
   height: 70px;
@@ -141,5 +149,14 @@ p {
 .container p {
   color: black;
   font-size: 12px;
+  top: 0;
+  width: 90%;
+}
+.exit {
+  position: absolute;
+  top: 1%;
+  left: 91%;
+  width: 40px;
+  height: 40px;
 }
 </style>

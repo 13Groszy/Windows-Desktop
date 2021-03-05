@@ -7,10 +7,10 @@
   <div class="container" v-if="this.bar != 0">
     <div class="LeftBar"></div>
     <div class="Menu">
-      <div class="Contact MenuBar TopBar" @click="contact = 1">Contact</div>
-      <div class="ProjectDex MenuBar" @click="dex = 1">Project Dex</div>
-      <div class="Skills MenuBar" @click="skill = 1">Skills</div>
-      <div class="AboutMe MenuBar" @click="me = 1">About me</div>
+      <div class="Contact MenuBar TopBar">Contact</div>
+      <div class="ProjectDex MenuBar">Project Dex</div>
+      <div class="Skills MenuBar">Skills</div>
+      <div class="AboutMe MenuBar">About me</div>
     </div>
     <div class="Off" @click="bar = 0" >
     <img class="Refresh" src="../assets/turnoff.png" />

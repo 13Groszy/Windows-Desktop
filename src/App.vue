@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Project-dex />
-    <contact-us />
-    <Skills @click="skill = 1" />
+    <Contact-us />
+    <Skills />
     <RecycleBin />
     <Bottom-Bar />
   </div>
@@ -23,14 +23,6 @@ export default {
     Skills,
     RecycleBin,
     ContactUs,
-  },
-  data: function () {
-    return {
-      bar: 0,
-      skill: 0,
-      dex: 0,
-      aboutme: 0,
-    };
   },
 };
 </script>
