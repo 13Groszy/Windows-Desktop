@@ -7,14 +7,17 @@
   <div class="container" v-if="this.bar != 0">
     <div class="LeftBar"></div>
     <div class="Menu">
-      <div class="Contact MenuBar TopBar">Contact</div>
-      <div class="ProjectDex MenuBar">Project Dex</div>
+      <div class="Contact MenuBar TopBar" @click="contact = 1">Contact</div>
+      <div class="ProjectDex MenuBar" @click="dex = 1">Project Dex</div>
       <div class="Skills MenuBar" @click="skill = 1">Skills</div>
-      <div class="AboutMe MenuBar">About me</div>
+      <div class="AboutMe MenuBar" @click="me = 1">About me</div>
     </div>
-    <img class="Refresh" src="../assets/turnoff.png" @click="bar = 0" />
+    <div class="Off" @click="bar = 0" >
+    <img class="Refresh" src="../assets/turnoff.png" />
+    </div>
     <img class="Burger" src="../assets/burger.png" />
   </div>
+
 </div>
 
 </template>
@@ -81,7 +84,7 @@ img {
 }
 .Refresh {
   position: absolute;
-  bottom: 120%;
+  bottom: 80%;
   z-index: 2;
   width: 20px;
   height: 20px;
@@ -104,5 +107,13 @@ img {
   background-color: grey;
   height: 300px;
   border-right: 1px solid black;
+}
+.Off {
+  background-color: transparent;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  z-index: 3;
+  bottom: 1px;
 }
 </style>
