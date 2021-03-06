@@ -3,8 +3,8 @@
       <img src="../assets/ProjectDexLogo.png" @click="dex = 1">
       <p>Project Dex</p>
       <div class="outerWrapper" v-if="this.dex != 0">
-        <div class="topBar">
-        <img src="../assets/exit.png" @click="dex = 0">
+        <div class="topBar"   draggable="true">
+        <img src="../assets/exit.png" @click="dex = 0" >
         <p>ProjectsIHaveDoneSoFar.exe</p>
         </div>
         <div class="exitBar"></div>
@@ -75,7 +75,8 @@ p {
   font-size: 20;
 }
 .outerWrapper {
-  background-color: aqua;
+  background: url("../assets/ProjectDexBg.jpg");
+  background-size: cover;
   width: 500px;
   height: 400px;
   position: absolute;
@@ -83,7 +84,7 @@ p {
   border-radius: 5px;
 }
 .topBar {
-  width: 300px;
+  width: 470px;
   height: 350px;
   position: absolute;
   left: 450px;
@@ -101,13 +102,9 @@ p {
   height: 20px;
   border-top-left-radius: 5px;
 }
-.topic {
-  width: 345px;
-  height: 168px;
-}
 .topic img {
   top: 20px;
-  left: 38px;
+  left: 28px;
   width: 345px;
   height: 168px;
   border-radius: 5px 5px 5px 0;
@@ -124,11 +121,15 @@ p {
   color: black;
 }
 .topic p {
+  width: 340px;
   color: black;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  top: 30px;
-  left: 128px;
+  top: 40px;
+  left: 148px;
+}
+.topic p:last-of-type {
+  left: 85px;
 }
 </style>
