@@ -2,16 +2,18 @@
     <div id="ProjectDex">
       <img src="../assets/ProjectDexLogo.png" @click="dex = 1">
       <p>Project Dex</p>
-      <div class="outerWrapper" v-if="this.dex != 0">
-        <div class="topBar"   draggable="true">
+      <div class="outerWrapper" ref="draggableContainer"  id="draggable-container" v-if="this.dex != 0">
+        <div class="topBar" id="draggable-header" @mousedown="dragMouseDown">
         <img src="../assets/exit.png" @click="dex = 0" >
         <p>ProjectsIHaveDoneSoFar.exe</p>
         </div>
         <div class="exitBar"></div>
         <div class="topic">
-          <img src="../assets/portfolio.png">
-          <p>My biggest project so far is this webpage and I use it as my portfolio.</p>
-          <p>Other projects, mainly done with tutorials, you can find at my GitHub repo.</p>
+          <div class="container">
+            <img src="../assets/portfolio.png">
+            <p>My biggest project so far is this webpage and I use it as my portfolio.</p>
+            <p>Other projects, mainly done with tutorials, you can find at my GitHub repo.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -19,11 +21,44 @@
 <script>
 export default {
   name: "ProjectDex",
-  components: {},
   data: function () {
     return {
       dex: 0,
+      positions: {
+        clientX: undefined,
+        clientY: undefined,
+        movementX: 0,
+        movementY: 0,
+      },
     };
+  },
+  methods: {
+    dragMouseDown: function (e) {
+      e.preventDefault();
+      this.positions.clientX = e.clientX;
+      this.positions.clientY = e.clientY;
+      document.onmousemove = this.elementDrag;
+      document.onmouseup = this.closeDragElement;
+    },
+    elementDrag: function (e) {
+      e.preventDefault();
+      this.positions.movementX = this.positions.clientX - e.clientX;
+      this.positions.movementY = this.positions.clientY - e.clientY;
+      this.positions.clientX = e.clientX;
+      this.positions.clientY = e.clientY;
+      this.$refs.draggableContainer.style.top =
+        this.$refs.draggableContainer.offsetTop -
+        this.positions.movementY +
+        "px";
+      this.$refs.draggableContainer.style.left =
+        this.$refs.draggableContainer.offsetLeft -
+        this.positions.movementX +
+        "px";
+    },
+    closeDragElement() {
+      document.onmouseup = null;
+      document.onmousemove = null;
+    },
   },
 };
 </script>
@@ -38,22 +73,6 @@ img {
 }
 img:hover {
   opacity: 0.8;
-}
-.modal {
-  width: 50%;
-  height: 50%;
-  bottom: 24%;
-  left: 10%;
-  border: 2px solid #f0f8ff;
-  border-radius: 50px;
-  position: fixed;
-}
-.modal:hover {
-  width: 51%;
-  height: 51%;
-  bottom: 24%;
-  left: 9.5%;
-  opacity: 1;
 }
 p {
   color: white;
@@ -81,7 +100,7 @@ p {
   height: 400px;
   position: absolute;
   left: 120px;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
 }
 .topBar {
   width: 470px;
@@ -100,10 +119,9 @@ p {
   background-color: #a2a2a1ff;
   width: 470px;
   height: 20px;
-  border-top-left-radius: 5px;
 }
 .topic img {
-  top: 20px;
+  top: -175px;
   left: 28px;
   width: 345px;
   height: 168px;
@@ -126,10 +144,16 @@ p {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  top: 40px;
+  top: -180px;
   left: 148px;
 }
 .topic p:last-of-type {
   left: 85px;
+}
+.container {
+  position: relative;
+  top: 220px;
+  height: 120px;
+  background: rgba(90, 90, 90, 0.4);
 }
 </style>

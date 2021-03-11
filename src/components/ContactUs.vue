@@ -102,7 +102,7 @@ textarea {
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
-  resize: vertical;
+  resize: none;
 }
 input[type="submit"] {
   background-color: #2bae66ff;
@@ -122,10 +122,10 @@ input[type="submit"]:hover {
   border-radius: 5px;
   background-color: #a2a2a1ff;
   padding: 20px;
-  width: 50%;
+  width: 30%;
   bottom: 25%;
   position: absolute;
-  left: 25%;
+  left: 30%;
   min-width: 400px;
   border: 1px solid black;
 }
