@@ -127,7 +127,7 @@ input[type="submit"]:hover {
   position: absolute;
   left: 30%;
   min-width: 400px;
-  border: 1px solid black;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
 }
 img {
   height: 70px;

@@ -64,6 +64,9 @@ export default {
 </script>
 
 <style scoped>
+* {
+  z-index: 13;
+}
 img {
   height: 70px;
   width: 70px;
@@ -101,6 +104,7 @@ p {
   position: absolute;
   left: 120px;
   border-radius: 0 0 5px 5px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
 }
 .topBar {
   width: 470px;
