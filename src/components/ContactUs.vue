@@ -1,7 +1,7 @@
 <template>
   <div id="Contact">
     <img src="../assets/mailbox.png" @click="contact = 1" />
-    <p>Contact Me</p>
+    <p>Email Me</p>
     <div v-if="this.contact != 0" class="container">
       <form @submit.prevent="sendEmail">
         <div>
@@ -143,7 +143,7 @@ p {
   color: white;
   font-weight: bold;
   font-size: 20px;
-  left: 7px;
+  left: 12px;
   top: -20px;
   position: relative;
 }

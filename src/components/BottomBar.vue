@@ -8,13 +8,13 @@
     <div class="LeftBar"></div>
     <div class="Menu">
       <ul  class="MenuBar">
-        <li><img src="">Contact Me </li>
-        <li><img src="">Project Dex</li>
-        <li><img src="">Skills</li>
-        <li><img src="">About me</li>
-        <li><img src="">GitHub</li>
-        <li><img src="">FunnyCats</li>
-        <li><img src="">PokeXGames</li>
+        <li><img src="../assets/Mini/ContactMe.png"><span>Contact</span></li>
+        <li><img src="../assets/Mini/Documents.png"><span>Project Dex</span></li>
+        <li><img src="../assets/Mini/Skills.png"><span>Skills</span></li>
+        <li><img src="../assets/Mini/AboutMe.png"><span>About me</span></li>
+        <li><img src="../assets/Mini/github.png"><span>GitHub</span></li>
+        <li><img src="../assets/Mini/FunnyCats.png"><span>FunnyCats</span></li>
+        <li><img src="../assets/Mini/PokeXGames.png"><span>PokeXGames</span></li>
       </ul>
     </div>
     <div class="Off" @click="bar = 0" >
@@ -49,7 +49,6 @@ export default {
   width: 100%;
   margin-top: 12px;
   padding: 0;
-  border-top: 1px solid #000;
   color: grey;
 }
 
@@ -70,20 +69,21 @@ img {
 }
 
 .Menu {
-  width: 246px;
+  width: 245px;
   height: 300px;
   position: relative;
   background-color: #202020;
   bottom: 312px;
 }
 .MenuBar {
-  width: 204px;
+  width: 205px;
   height: 400px;
 }
 
-.MenuBar li:hover {
+li:hover {
   opacity: 0.8px;
-  background-color: lightgray;
+  background-color: rgb(54, 54, 54);
+  color: rgb(255, 255, 255);
 }
 
 .Refresh {
@@ -125,9 +125,19 @@ ul {
   list-style-type: none;
 }
 li {
-  height: 31px;
-  padding-top: 12px;
+  height: 38px;
+  padding-top: 5px;
   padding-left: 50px;
   font-size: 15px;
+}
+li img {
+  position: absolute;
+  left: 45px;
+  width: 30px;
+  height: 30px;
+}
+span {
+  position: relative;
+  top: 9px;
 }
 </style>
