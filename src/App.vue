@@ -2,9 +2,9 @@
   <div id="app">
     <Project-dex />
     <Contact-us />
-    <Skills />
-    <RecycleBin />
-    <Bottom-Bar />
+    <Skills @click.native="searchAPI" />
+    <Wallet v-if="wallet" @closeWallet="wallet = false" />
+    <Bottom-Bar @openWallet="wallet = true" />
   </div>
 </template>
 
@@ -12,7 +12,7 @@
 import BottomBar from "./components/BottomBar.vue";
 import ProjectDex from "./components/ProjectDex.vue";
 import Skills from "./components/Skills.vue";
-import RecycleBin from "./components/RecycleBin.vue";
+import Wallet from "./components/Wallet.vue";
 import ContactUs from "./components/ContactUs.vue";
 
 export default {
@@ -21,8 +21,13 @@ export default {
     BottomBar,
     ProjectDex,
     Skills,
-    RecycleBin,
+    Wallet,
     ContactUs,
+  },
+  data() {
+    return {
+      wallet: false,
+    };
   },
 };
 </script>

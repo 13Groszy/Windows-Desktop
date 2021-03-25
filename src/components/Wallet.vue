@@ -1,23 +1,18 @@
 <template lang="">
-    <div id="Skills">
-      <img src="../assets/Skills.png" @click="skill = 1">
-      <p>Skills</p>
-      <div   v-if="this.skill != 0">
-        <img class="modal" src="../assets/modal.png" @click="skill--">
-        <p id="modalP" @click="skill--">
-        Prepare for Pokem! Make it Ipsum! To protect the world from devastation!
-        To unite all peoples within our nation!
-      </p>
+    <div id="wallet">
+      <div @click="$emit('closeWallet')">
+        <img class="modal" src="../assets/modal.png">
+      <p></p>
       </div>
     </div>
 </template>
 <script>
 export default {
-  name: "Skills",
+  name: "wallet",
   components: {},
   data: function () {
     return {
-      skill: 0,
+      btc: 0,
     };
   },
 };

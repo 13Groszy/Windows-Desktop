@@ -13,7 +13,7 @@
         <li><img src="../assets/Mini/Skills.png"><span>Skills</span></li>
         <li><img src="../assets/Mini/AboutMe.png"><span>About me</span></li>
         <li><img src="../assets/Mini/github.png"><span>GitHub</span></li>
-        <li><img src="../assets/Mini/FunnyCats.png"><span>FunnyCats</span></li>
+        <li @click="$emit('openWallet')"><img src="../assets/Mini/FunnyCats.png"><span>APICOINS</span></li>
         <li><img src="../assets/Mini/PokeXGames.png"><span>PokeXGames</span></li>
       </ul>
     </div>
