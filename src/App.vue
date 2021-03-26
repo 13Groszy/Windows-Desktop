@@ -2,7 +2,7 @@
   <div id="app">
     <Project-dex />
     <Contact-us />
-    <Skills @click.native="searchAPI" />
+    <Skills />
     <Wallet v-if="wallet" @closeWallet="wallet = false" />
     <Bottom-Bar @openWallet="wallet = true" />
   </div>

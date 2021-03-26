@@ -73,6 +73,7 @@ export default {
             message: this.meessage,
           }
         );
+        alert("Thank you for your email, I'll response as soon as I can")
       } catch (error) {
         console.log({ error });
       }
