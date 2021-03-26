@@ -12,7 +12,7 @@
         <li><img src="../assets/Mini/Documents.png"><span>Project Dex</span></li>
         <li><img src="../assets/Mini/Skills.png"><span>Skills</span></li>
         <li><img src="../assets/Mini/AboutMe.png"><span>About me</span></li>
-        <li><img src="../assets/Mini/github.png"><span>GitHub</span></li>
+        <a href="http://github.com/13Groszy" target="_blank"><li><img src="../assets/Mini/github.png"><span>GitHub</span></li></a>
         <li @click="$emit('openWallet')"><img src="../assets/Mini/FunnyCats.png"><span>APICOINS</span></li>
         <li><img src="../assets/Mini/PokeXGames.png"><span>PokeXGames</span></li>
       </ul>
@@ -139,5 +139,9 @@ li img {
 span {
   position: relative;
   top: 9px;
+}
+a {
+  color: grey;
+  text-decoration: none;
 }
 </style>

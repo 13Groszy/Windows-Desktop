@@ -3,6 +3,7 @@
     <Project-dex />
     <Contact-us />
     <Skills />
+    <GitHub @openGH="GH = true" />
     <Wallet v-if="wallet" @closeWallet="wallet = false" />
     <Bottom-Bar @openWallet="wallet = true" />
   </div>
@@ -14,6 +15,7 @@ import ProjectDex from "./components/ProjectDex.vue";
 import Skills from "./components/Skills.vue";
 import Wallet from "./components/Wallet.vue";
 import ContactUs from "./components/ContactUs.vue";
+import GitHub from "./components/GitHub.vue";
 
 export default {
   name: "App",
@@ -23,6 +25,7 @@ export default {
     Skills,
     Wallet,
     ContactUs,
+    GitHub,
   },
   data() {
     return {
