@@ -5,12 +5,24 @@
      <div class="outerWrapper" ref="draggableContainer"  id="draggable-container" v-if="this.skill != 0">
         <div class="topBar" id="draggable-header" @mousedown="dragMouseDown">
         <img src="../assets/exit.png" @click="skill = 0" >
-        <p>ProjectsIHaveDoneSoFar.exe</p>
+        <p>Skills.html</p>
         </div>
         <div class="exitBar"></div>
         <div class="topic">
-          <p>Sed suscipit ac erat dapibus rhoncus. Nulla vitae ipsum libero. Nullam efficitur turpis ut tempor venenatis.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at quam nibh. </p>
+          <h1>Skills</h1>
+            <p>By writing 'skills' I understand languages or frameworks in which I feel good about or which I am learning</p>
+            <hr>
+          <h1>Languages</h1>
+            <p>HTML, CSS and JavaScript are 'must have' to become FrontEnd Developer so I put the greatest emphasis on knowing them</p>
+              <img src="../assets/Mini/HTML.png"> <img src="../assets/Mini/CSS.png"> <img src="../assets/Mini/JS.png">
+              <hr>
+          <h1>Frameworks</h1>
+            <p>Vue.js is the only one framework which I am learning so far and my next step is get to know libraries like Vuex or Vue-Router</p>
+              <img src="../assets/Mini/VueJs.png">
+              <hr>
+          <h1>Others</h1>
+            <img src="../assets/Mini/GIT.png"><img src="../assets/Mini/MediaQuery.jpg">
+          <p></p>
         </div>
       </div>
     </div>
@@ -71,6 +83,7 @@ img {
   bottom: 60%;
   left: 20px;
   position: relative;
+  z-index: 14;
 }
 img:hover {
   opacity: 0.8;
@@ -84,12 +97,13 @@ p {
   position: relative;
 }
 .outerWrapper {
-  background-color: bisque;
+  background-color: rgb(80, 80, 80);
   background-size: cover;
   width: 500px;
-  height: 400px;
+  height: 470px;
   position: absolute;
-  left: 120px;
+  left: 250px;
+  bottom: 150px;
   border-radius: 0 0 5px 5px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
 }
@@ -98,7 +112,7 @@ p {
   height: 350px;
   position: absolute;
   left: 450px;
-  bottom: -159.5px;
+  bottom: -90px;
 }
 .topBar img {
   width: 30px;
@@ -119,6 +133,29 @@ p {
   top: -246px;
   font-size: 14px;
   font-weight: 100;
-  color: black;
+  color: rgb(0, 0, 0);
+}
+.topic {
+  text-align: center;
+}
+.topic p {
+  width: 450px;
+  top: 10px;
+  left: 20px;
+  font-size: 14px;
+  color: rgb(179, 179, 179);
+  margin: 7px;
+}
+h1 {
+  margin: 7px;
+}
+.topic img {
+  margin: 10px 20px 0px 20px;
+  width: 30px;
+  height: 30px;
+  left: 0;
+}
+hr {
+  margin: 10px 25px 0 25px;
 }
 </style>
