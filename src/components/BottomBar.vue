@@ -2,15 +2,20 @@
 <div id="BottomBar">
   <img src="../assets/winlogo.png" @click="bar = 1" >
   <form action="https://www.google.com/search"  method="get"  target="_blank">
-    <input  name="q" placeholder="Search in google" type="text">
+    <input  name="q" placeholder="Search in Google" type="text">
   </form>
   <div class="container" v-if="this.bar != 0">
     <div class="LeftBar"></div>
     <div class="Menu">
-      <div class="Contact MenuBar TopBar">Contact</div>
-      <div class="ProjectDex MenuBar">Project Dex</div>
-      <div class="Skills MenuBar">Skills</div>
-      <div class="AboutMe MenuBar">About me</div>
+      <ul  class="MenuBar">
+        <li @click="$emit('opencontactUs')"><img src="../assets/Mini/ContactMe.png"><span>Contact</span></li>
+        <li @click="$emit('opendex')"><img src="../assets/Mini/Documents.png"><span>Project Dex</span></li>
+        <li @click="$emit('openskills')"><img src="../assets/Mini/Skills.png"><span>Skills</span></li>
+        <li><img src="../assets/Mini/AboutMe.png"><span>About me</span></li>
+        <a href="http://github.com/13Groszy" target="_blank"><li><img src="../assets/Mini/github.png"><span>GitHub</span></li></a>
+        <li @click="$emit('openWallet')"><img src="../assets/Mini/FunnyCats.png"><span>APICOINS</span></li>
+        <li><img src="../assets/Mini/PokeXGames.png"><span>PokeXGames</span></li>
+      </ul>
     </div>
     <div class="Off" @click="bar = 0" >
     <img class="Refresh" src="../assets/turnoff.png" />
@@ -34,24 +39,26 @@ export default {
 </script>
 <style scoped>
 #BottomBar {
+  z-index: 15;
   height: 35px;
-  position: fixed;
   right: 0;
-  bottom: 0px;
-  position: bottom;
-  background-color: black;
+  bottom: 0;
+  position: fixed;
+  background-color: rgba(32, 32, 32, 0.7);
   width: 100%;
   margin-top: 12px;
+  color: grey;
   padding: 0;
-  border-top: 1px solid black;
 }
+
 input {
   position: absolute;
   margin-left: 40px;
-  height: 28px;
-  width: 250px;
-  border: 1px solid black;
+  height: 32px;
+  width: 200px;
+  border: 1px solid #000;
 }
+
 img {
   position: absolute;
   width: 30px;
@@ -59,29 +66,26 @@ img {
   margin-top: 2px;
   margin-left: 4px;
 }
+
 .Menu {
-  width: 253px;
+  width: 245px;
   height: 300px;
   position: relative;
-  background-color: grey;
-  bottom: 300px;
-  left: 42px;
-  border-top-right-radius: 10px;
+  background-color: #202020;
+  bottom: 312px;
 }
-.TopBar:hover {
-  border-top-right-radius: 10px;
-}
+
 .MenuBar {
-  height: 75px;
-  border-bottom: 1px solid black;
+  width: 205px;
+  height: 400px;
 }
-.MenuBar:last-child {
-  border-bottom: 0;
+
+li:hover {
+  opacity: 0.8px;
+  background-color: #363636;
+  color: #fff;
 }
-.MenuBar:hover {
-  opacity: 0.8;
-  background-color: lightgray;
-}
+
 .Refresh {
   position: absolute;
   bottom: 80%;
@@ -90,6 +94,7 @@ img {
   height: 20px;
   left: 5px;
 }
+
 .Burger {
   position: absolute;
   bottom: 880%;
@@ -98,16 +103,16 @@ img {
   width: 20px;
   height: 20px;
 }
+
 .LeftBar {
   position: absolute;
   z-index: 1;
-  width: 41px;
-  height: 200px;
+  width: 42px;
   bottom: 35px;
-  background-color: grey;
+  background-color: #202020;
   height: 300px;
-  border-right: 1px solid black;
 }
+
 .Off {
   background-color: transparent;
   position: absolute;
@@ -115,5 +120,33 @@ img {
   width: 50px;
   z-index: 3;
   bottom: 1px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  height: 38px;
+  padding-top: 5px;
+  padding-left: 50px;
+  font-size: 15px;
+}
+
+li img {
+  position: absolute;
+  left: 45px;
+  width: 30px;
+  height: 30px;
+}
+
+span {
+  position: relative;
+  top: 9px;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
 }
 </style>
