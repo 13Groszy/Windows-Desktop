@@ -8,9 +8,7 @@
 </template>
 
 <script>
-export default {
-
-};
+export default {};
 </script>
 
 <style scoped>
@@ -18,16 +16,15 @@ export default {
   position: absolute;
   left: 17px;
 }
+
 img {
   width: 80px;
   height: 80px;
 }
-img:hover {
-  opacity: 0.8;
-}
+
 p {
-  color: white;
-  font-weight: bold;
+  color: #fff;
+  font-weight: 700;
   font-size: 20px;
   left: 7px;
   top: -18px;

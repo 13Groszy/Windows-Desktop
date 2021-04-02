@@ -8,9 +8,9 @@
     <div class="LeftBar"></div>
     <div class="Menu">
       <ul  class="MenuBar">
-        <li><img src="../assets/Mini/ContactMe.png"><span>Contact</span></li>
-        <li><img src="../assets/Mini/Documents.png"><span>Project Dex</span></li>
-        <li><img src="../assets/Mini/Skills.png"><span>Skills</span></li>
+        <li @click="$emit('opencontactUs')"><img src="../assets/Mini/ContactMe.png"><span>Contact</span></li>
+        <li @click="$emit('opendex')"><img src="../assets/Mini/Documents.png"><span>Project Dex</span></li>
+        <li @click="$emit('openskills')"><img src="../assets/Mini/Skills.png"><span>Skills</span></li>
         <li><img src="../assets/Mini/AboutMe.png"><span>About me</span></li>
         <a href="http://github.com/13Groszy" target="_blank"><li><img src="../assets/Mini/github.png"><span>GitHub</span></li></a>
         <li @click="$emit('openWallet')"><img src="../assets/Mini/FunnyCats.png"><span>APICOINS</span></li>
@@ -41,15 +41,14 @@ export default {
 #BottomBar {
   z-index: 15;
   height: 35px;
-  position: fixed;
   right: 0;
   bottom: 0;
-  position: bottom;
+  position: fixed;
   background-color: rgba(32, 32, 32, 0.7);
   width: 100%;
   margin-top: 12px;
-  padding: 0;
   color: grey;
+  padding: 0;
 }
 
 input {
@@ -75,6 +74,7 @@ img {
   background-color: #202020;
   bottom: 312px;
 }
+
 .MenuBar {
   width: 205px;
   height: 400px;
@@ -82,8 +82,8 @@ img {
 
 li:hover {
   opacity: 0.8px;
-  background-color: rgb(54, 54, 54);
-  color: rgb(255, 255, 255);
+  background-color: #363636;
+  color: #fff;
 }
 
 .Refresh {
@@ -121,25 +121,30 @@ li:hover {
   z-index: 3;
   bottom: 1px;
 }
+
 ul {
   list-style-type: none;
 }
+
 li {
   height: 38px;
   padding-top: 5px;
   padding-left: 50px;
   font-size: 15px;
 }
+
 li img {
   position: absolute;
   left: 45px;
   width: 30px;
   height: 30px;
 }
+
 span {
   position: relative;
   top: 9px;
 }
+
 a {
   color: grey;
   text-decoration: none;

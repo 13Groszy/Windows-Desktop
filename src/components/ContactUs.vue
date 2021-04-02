@@ -1,11 +1,13 @@
 <template>
   <div id="Contact">
-    <img src="../assets/mailbox.png" @click="contact = 1" />
-    <p>Email Me</p>
-    <div v-if="this.contact != 0" class="container">
+    <div class="container">
       <form @submit.prevent="sendEmail">
         <div>
-          <img class="exit" src="../assets/xbutton.png" @click="contact = 0" />
+          <img
+            class="exit"
+            src="../assets/xbutton.png"
+            @click="$emit('closecontactus')"
+          />
           <p>
             If you are happy to contact me, use the form below and I promise to
             response as soon as possible.
@@ -73,7 +75,7 @@ export default {
             message: this.meessage,
           }
         );
-        alert("Thank you for your email, I'll response as soon as I can")
+        alert("Thank you for your email, I'll response as soon as I can");
       } catch (error) {
         console.log({ error });
       }
@@ -87,78 +89,66 @@ export default {
 
 <style scoped>
 * {
-  box-sizing: border-box;
-  z-index: 3;
+box-sizing:border-box;
+z-index:3;
 }
+
 label {
-  float: left;
+float:left;
 }
-input[type="text"],
-[type="email"],
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: none;
+
+input[type="text"],[type="email"],textarea {
+width:100%;
+border:1px solid #ccc;
+border-radius:4px;
+box-sizing:border-box;
+margin-top:6px;
+margin-bottom:16px;
+resize:none;
+padding:12px;
 }
+
 input[type="submit"] {
-  background-color: #2bae66ff;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+background-color:#2bae66ff;
+color:#FFF;
+border:none;
+border-radius:4px;
+cursor:pointer;
+padding:12px 20px;
 }
+
 input[type="submit"]:hover {
-  background-color: #195190ff;
+background-color:#195190ff;
 }
+
 .container {
-  display: block;
-  margin: auto;
-  text-align: center;
-  border-radius: 5px;
-  background-color: #a2a2a1ff;
-  padding: 20px;
-  width: 30%;
-  bottom: 25%;
-  position: absolute;
-  left: 30%;
-  min-width: 400px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+display:block;
+text-align:center;
+border-radius:5px;
+background-color:#a2a2a1ff;
+width:30%;
+bottom:25%;
+position:absolute;
+left:30%;
+min-width:400px;
+box-shadow:0 3px 10px rgba(0, 0, 0, 0.8);
+margin:auto;
+padding:20px;
 }
-img {
-  height: 70px;
-  width: 70px;
-  bottom: 60%;
-  left: 20px;
-  position: relative;
-}
-img:hover {
-  opacity: 0.8;
-}
+
 p {
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  left: 12px;
-  top: -20px;
-  position: relative;
+color:#000;
+font-size:12px;
+top:0;
+width:90%;
+font-weight:700;
 }
-.container p {
-  color: black;
-  font-size: 12px;
-  top: 0;
-  width: 90%;
-}
+
 .exit {
-  position: absolute;
-  top: 1%;
-  left: 91%;
-  width: 40px;
-  height: 40px;
+position:absolute;
+top:1%;
+left:93.5%;
+width:20px;
+height:20px;
 }
 </style>

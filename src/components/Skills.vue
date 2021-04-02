@@ -1,13 +1,11 @@
 <template lang="">
     <div id="Skills">
-      <img src="../assets/Skills.png" @click="skill = 1">
-      <p>Skills</p>
-     <div class="outerWrapper" ref="draggableContainer"  id="draggable-container" v-if="this.skill != 0">
-        <div class="topBar" id="draggable-header" @mousedown="dragMouseDown">
-        <img src="../assets/exit.png" @click="skill = 0" >
+     <div class="outerWrapper" ref="draggableContainer"  id="draggable-container">
+        <div class="bar" id="draggable-header" @mousedown="dragMouseDown">
+        <img src="../assets/exit.png" @click="$emit('closeskills')">
         <p>Skills.html</p>
         </div>
-        <div class="exitBar"></div>
+        <div class="topBar"></div>
         <div class="topic">
           <h1>Skills</h1>
             <p>By writing 'skills' I understand languages or frameworks in which I feel good about or which I am learning</p>
@@ -77,6 +75,7 @@ export default {
 * {
   z-index: 13;
 }
+
 img {
   height: 70px;
   width: 70px;
@@ -85,19 +84,18 @@ img {
   position: relative;
   z-index: 14;
 }
-img:hover {
-  opacity: 0.8;
-}
+
 p {
-  color: white;
-  font-weight: bold;
+  color: #fff;
+  font-weight: 700;
   font-size: 20px;
   left: 31px;
   top: -20px;
   position: relative;
 }
+
 .outerWrapper {
-  background-color: rgb(80, 80, 80);
+  background-color: #505050;
   background-size: cover;
   width: 500px;
   height: 470px;
@@ -105,57 +103,67 @@ p {
   left: 250px;
   bottom: 150px;
   border-radius: 0 0 5px 5px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
 }
-.topBar {
+
+.bar {
   width: 470px;
   height: 350px;
   position: absolute;
   left: 450px;
   bottom: -90px;
 }
-.topBar img {
+
+.bar img {
   width: 30px;
   height: 20.5px;
   object-position: right top;
   border-radius: 1px 2px 3px 0;
 }
-.exitBar {
+
+.topBar {
   background-color: #a2a2a1ff;
   width: 470px;
   height: 20px;
 }
+
 .outerWrapper img:hover {
-  opacity: 1;
+  opacity: 1px;
 }
+
 .outerWrapper p {
   left: -440px;
   top: -246px;
   font-size: 14px;
   font-weight: 100;
-  color: rgb(0, 0, 0);
+  color: #000;
 }
+
 .topic {
   text-align: center;
 }
+
 .topic p {
   width: 450px;
   top: 10px;
   left: 20px;
   font-size: 14px;
-  color: rgb(179, 179, 179);
+  color: #b3b3b3;
   margin: 7px;
 }
+
 h1 {
   margin: 7px;
 }
+
 .topic img {
-  margin: 10px 20px 0px 20px;
   width: 30px;
   height: 30px;
   left: 0;
+  margin: 10px 20px 0;
 }
+
 hr {
-  margin: 10px 25px 0 25px;
+  margin: 10px 25px 0;
 }
 </style>

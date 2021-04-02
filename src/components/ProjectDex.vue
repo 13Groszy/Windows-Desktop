@@ -1,10 +1,8 @@
 <template lang="">
     <div id="ProjectDex">
-      <img src="../assets/ProjectDexLogo.png" @click="dex = 1">
-      <p>Project Dex</p>
-      <div class="outerWrapper" ref="draggableContainer"  id="draggable-container" v-if="this.dex != 0">
+      <div class="outerWrapper" ref="draggableContainer"  id="draggable-container">
         <div class="topBar" id="draggable-header" @mousedown="dragMouseDown">
-        <img src="../assets/exit.png" @click="dex = 0" >
+        <img src="../assets/exit.png" @click="$emit('closedex')">
         <p>ProjectsIHaveDoneSoFar.exe</p>
         </div>
         <div class="exitBar"></div>
@@ -67,6 +65,7 @@ export default {
 * {
   z-index: 13;
 }
+
 img {
   height: 70px;
   width: 70px;
@@ -74,19 +73,22 @@ img {
   left: 20px;
   position: relative;
 }
+
 img:hover {
-  opacity: 0.8;
+  opacity: 0.8px;
 }
+
 p {
-  color: white;
-  font-weight: bold;
+  color: #fff;
+  font-weight: 700;
   font-size: 20px;
   left: 7px;
   top: -20px;
   position: relative;
 }
+
 #modalP {
-  color: white;
+  color: #fff;
   width: 40%;
   max-width: 400px;
   height: 50%;
@@ -94,8 +96,9 @@ p {
   text-align: justify;
   position: fixed;
   top: 45%;
-  font-size: 20;
+  font-size: 20px;
 }
+
 .outerWrapper {
   background: url("../assets/ProjectDexBg.jpg");
   background-size: cover;
@@ -104,8 +107,9 @@ p {
   position: absolute;
   left: 120px;
   border-radius: 0 0 5px 5px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
 }
+
 .topBar {
   width: 470px;
   height: 350px;
@@ -113,17 +117,20 @@ p {
   left: 450px;
   bottom: -159.5px;
 }
+
 .topBar img {
   width: 30px;
   height: 20.5px;
   object-position: right top;
   border-radius: 1px 2px 3px 0;
 }
+
 .exitBar {
   background-color: #a2a2a1ff;
   width: 470px;
   height: 20px;
 }
+
 .topic img {
   top: -175px;
   left: 28px;
@@ -133,27 +140,31 @@ p {
 }
 
 .outerWrapper img:hover {
-  opacity: 1;
+  opacity: 1px;
 }
+
 .outerWrapper p {
   left: -440px;
   top: -246px;
   font-size: 14px;
   font-weight: 100;
-  color: black;
+  color: #000;
 }
+
 .topic p {
   width: 340px;
-  color: black;
+  color: #000;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   top: -180px;
   left: 148px;
 }
+
 .topic p:last-of-type {
   left: 85px;
 }
+
 .container {
   position: relative;
   top: 220px;
