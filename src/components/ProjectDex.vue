@@ -2,10 +2,9 @@
     <div id="ProjectDex">
       <div class="outerWrapper" ref="draggableContainer"  id="draggable-container">
         <div class="topBar" id="draggable-header" @mousedown="dragMouseDown">
-        <img src="../assets/exit.png" @click="$emit('closedex')">
-        <p>ProjectsIHaveDoneSoFar.exe</p>
+          <p>ProjectsIHaveDoneSoFar.exe</p>
         </div>
-        <div class="exitBar"></div>
+        <div class="exitBar"><img src="../assets/exit.png" @click="$emit('closedex')"></div>
         <div class="topic">
           <div class="container">
             <img src="../assets/portfolio.png">
@@ -67,8 +66,6 @@ export default {
 }
 
 img {
-  height: 70px;
-  width: 70px;
   bottom: 60%;
   left: 20px;
   position: relative;
@@ -107,10 +104,8 @@ p {
 
 .topBar {
   width: 470px;
-  height: 350px;
+  height: 20px;
   position: absolute;
-  left: 450px;
-  bottom: -159.5px;
 }
 
 .topBar img {
@@ -135,8 +130,7 @@ p {
 }
 
 .outerWrapper p {
-  left: -440px;
-  top: -246px;
+  top: -12px;
   font-size: 14px;
   font-weight: 100;
   color: #000;
@@ -161,5 +155,14 @@ p {
   top: 220px;
   height: 120px;
   background: rgba(90, 90, 90, 0.4);
+}
+.innerWrapper {
+  height: 20px;
+}
+.exitBar img {
+  height: 20px;
+  width: 30px;
+  top: 0;
+  left: 100%;
 }
 </style>

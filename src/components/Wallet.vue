@@ -14,7 +14,7 @@
           <img src="../assets/cryp/uni.png" @click="coinId = '72821'">
         </div>
         <button class="API" @click = "fetchAPIData">Check!</button>
-        <p>{{result}}</p>
+        <p v-if=this.coin >{{result}}</p>
       </div>
     </div>
 </template>
@@ -30,8 +30,8 @@ export default {
         movementX: 0,
         movementY: 0,
       },
-      result: "",
       coinId: "",
+      coin: "",
     };
   },
   methods: {
@@ -46,11 +46,7 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
-          this.result = `The coin you choosed is ${
-            json.data.coin.name
-          } with symbol ${
-            json.data.coin.symbol
-          } and actual price ${json.data.coin.price.slice(0, 7)}$`;
+          this.coin = json.data.coin;
         })
         .catch((err) => {
           console.error(err);
@@ -81,6 +77,13 @@ export default {
     closeDragElement() {
       document.onmouseup = null;
       document.onmousemove = null;
+    },
+  },
+  computed: {
+    result() {
+      return `The coin you choosed is ${this.coin.name} with symbol ${
+        this.coin.symbol
+      } and actual price ${this.coin.price.slice(0, 7)}$`;
     },
   },
 };
@@ -151,5 +154,8 @@ p {
   text-align: center;
   left: 10%;
   bottom: 12%;
+}
+img :target {
+  background-color: #85bb65;
 }
 </style>
