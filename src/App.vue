@@ -15,6 +15,10 @@
       @opencontactUs="contactUs = true"
       @openskills="skills = true"
       @opendex="dex = true"
+      @closedex="dex = false"
+      @closecontactus="contactUs = false"
+      @closeskills="skills = false"
+      @closeWallet="wallet = false"
     />
   </div>
 </template>

@@ -51,7 +51,6 @@ export default {
           } with symbol ${
             json.data.coin.symbol
           } and actual price ${json.data.coin.price.slice(0, 7)}$`;
-          console.log(this.result);
         })
         .catch((err) => {
           console.error(err);
