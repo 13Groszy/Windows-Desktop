@@ -73,11 +73,6 @@ img {
   left: 20px;
   position: relative;
 }
-
-img:hover {
-  opacity: 0.8px;
-}
-
 p {
   color: #fff;
   font-weight: 700;
@@ -137,10 +132,6 @@ p {
   width: 345px;
   height: 168px;
   border-radius: 5px 5px 5px 0;
-}
-
-.outerWrapper img:hover {
-  opacity: 1px;
 }
 
 .outerWrapper p {

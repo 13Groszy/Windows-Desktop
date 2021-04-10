@@ -3,7 +3,11 @@
     <Project-dex v-if="dex" @closedex="dex = false" />
     <Contact-us v-if="contactUs" @closecontactus="contactUs = false" />
     <Skills v-if="skills" @closeskills="skills = false" />
-    <Desktop @opencontactUs="contactUs = true" @opendex="dex = true" @openskills="skills = true"  />
+    <Desktop
+      @opencontactUs="contactUs = true"
+      @opendex="dex = true"
+      @openskills="skills = true"
+    />
     <GitHub @openGH="GH = true" />
     <Wallet v-if="wallet" @closeWallet="wallet = false" />
     <Bottom-Bar
@@ -11,6 +15,10 @@
       @opencontactUs="contactUs = true"
       @openskills="skills = true"
       @opendex="dex = true"
+      @closedex="dex = false"
+      @closecontactus="contactUs = false"
+      @closeskills="skills = false"
+      @closeWallet="wallet = false"
     />
   </div>
 </template>

@@ -14,10 +14,10 @@
         <li><img src="../assets/Mini/AboutMe.png"><span>About me</span></li>
         <a href="http://github.com/13Groszy" target="_blank"><li><img src="../assets/Mini/github.png"><span>GitHub</span></li></a>
         <li @click="$emit('openWallet')"><img src="../assets/Mini/FunnyCats.png"><span>APICOINS</span></li>
-        <li><img src="../assets/Mini/PokeXGames.png"><span>PokeXGames</span></li>
+        <a href="https://www.pokexgames.com/#/home" target="_blank"><li><img src="../assets/Mini/PokeXGames.png"><span>PokeXGames</span></li></a>
       </ul>
     </div>
-    <div class="Off" @click="bar = 0" >
+    <div class="Off" @click="bar = 0, $emit('closedex'),$emit('closecontactus'),$emit('closeskills'),$emit('closeWallet')" >
     <img class="Refresh" src="../assets/turnoff.png" />
     </div>
     <img class="Burger" src="../assets/burger.png" />
