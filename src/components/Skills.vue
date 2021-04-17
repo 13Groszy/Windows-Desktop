@@ -2,10 +2,11 @@
     <div id="Skills">
      <div class="outerWrapper" ref="draggableContainer"  id="draggable-container">
         <div class="bar" id="draggable-header" @mousedown="dragMouseDown">
-        <img src="../assets/exit.png" @click="$emit('closeskills')">
-        <p>Skills.html</p>
+          <p>Skills.html</p>
         </div>
-        <div class="topBar"></div>
+        <div class="topBar">
+          <img src="../assets/exit.png" @click="$emit('closeskills')">
+        </div>
         <div class="topic">
           <h1>Skills</h1>
             <p>By writing 'skills' I understand languages or frameworks in which I feel good about or which I am learning</p>
@@ -75,22 +76,7 @@ export default {
 * {
   z-index: 13;
 }
-
-img {
-  height: 70px;
-  width: 70px;
-  bottom: 60%;
-  left: 20px;
-  position: relative;
-  z-index: 14;
-}
-
 p {
-  color: #fff;
-  font-weight: 700;
-  font-size: 20px;
-  left: 31px;
-  top: -20px;
   position: relative;
 }
 
@@ -108,10 +94,8 @@ p {
 
 .bar {
   width: 470px;
-  height: 350px;
+  height: 20px;
   position: absolute;
-  left: 450px;
-  bottom: -90px;
 }
 
 .bar img {
@@ -127,13 +111,9 @@ p {
   height: 20px;
 }
 
-.outerWrapper img:hover {
-  opacity: 1px;
-}
-
 .outerWrapper p {
-  left: -440px;
-  top: -246px;
+  left: 7px;
+  top: -10px;
   font-size: 14px;
   font-weight: 100;
   color: #000;
@@ -154,6 +134,7 @@ p {
 
 h1 {
   margin: 7px;
+  font-size: 24px;
 }
 
 .topic img {
@@ -165,5 +146,12 @@ h1 {
 
 hr {
   margin: 10px 25px 0;
+}
+.topBar img {
+  height: 20px;
+  width: 30px;
+  position: relative;
+  top: 0;
+  left: 100%;
 }
 </style>
