@@ -99,6 +99,7 @@ export default {
   top: 100px;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+  z-index: 25;
 }
 .exit {
   position: absolute;

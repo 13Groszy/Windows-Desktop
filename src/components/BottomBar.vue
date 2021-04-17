@@ -1,28 +1,30 @@
 <template lang="">
 <div id="BottomBar">
+  <div class="barWrapper">
   <img src="../assets/winlogo.png" @click="bar = 1" >
   <form action="https://www.google.com/search"  method="get"  target="_blank">
     <input  name="q" placeholder="Search in Google" type="text">
   </form>
+  </div>
   <div class="container" v-if="this.bar != 0">
-    <div class="LeftBar"></div>
-    <div class="Menu">
-      <ul  class="MenuBar">
+    <div class="leftBar">
+      <img class="Burger" src="../assets/burger.png" />
+      <div class="off" @click="bar = 0" >
+        <img class="Refresh" @click="bar = 0, $emit('closedex'),$emit('closecontactus'),$emit('closeskills'),$emit('closeWallet')" src="../assets/turnoff.png" />
+      </div>      
+    </div>
+    <div class="menu">
+      <ul  class="menuBar">
         <li @click="$emit('opencontactUs')"><img src="../assets/Mini/ContactMe.png"><span>Contact</span></li>
         <li @click="$emit('opendex')"><img src="../assets/Mini/Documents.png"><span>Project Dex</span></li>
         <li @click="$emit('openskills')"><img src="../assets/Mini/Skills.png"><span>Skills</span></li>
         <li><img src="../assets/Mini/AboutMe.png"><span>About me</span></li>
-        <a href="http://github.com/13Groszy" target="_blank"><li><img src="../assets/Mini/github.png"><span>GitHub</span></li></a>
-        <li @click="$emit('openWallet')"><img src="../assets/Mini/FunnyCats.png"><span>APICOINS</span></li>
+        <a href="http://github.com/13Groszy" target="_blank"><li><img src="../assets/Mini/github.png"><span>GitHub</span></li></a>        
         <a href="https://www.pokexgames.com/#/home" target="_blank"><li><img src="../assets/Mini/PokeXGames.png"><span>PokeXGames</span></li></a>
+        <li @click="$emit('openWallet')"><img src="../assets/Mini/FunnyCats.png"><span>APICOINS</span></li>
       </ul>
     </div>
-    <div class="Off" @click="bar = 0" >
-    <img class="Refresh" @click="bar = 0, $emit('closedex'),$emit('closecontactus'),$emit('closeskills'),$emit('closeWallet')" src="../assets/turnoff.png" />
-    </div>
-    <img class="Burger" src="../assets/burger.png" />
   </div>
-
 </div>
 
 </template>
@@ -38,115 +40,85 @@ export default {
 };
 </script>
 <style scoped>
-#BottomBar {
-  z-index: 15;
-  height: 35px;
-  right: 0;
-  bottom: 0;
-  position: fixed;
-  background-color: rgba(32, 32, 32, 0.7);
-  width: 100%;
-  margin-top: 12px;
-  color: grey;
-  padding: 0;
-}
-
-input {
+.barWrapper {
   position: absolute;
-  margin-left: 40px;
-  height: 32px;
-  width: 200px;
-  border: 1px solid #000;
-}
-
-img {
-  position: absolute;
-  width: 30px;
+  z-index: 20;
   height: 30px;
-  margin-top: 2px;
-  margin-left: 4px;
+  width: 100%;
+  bottom: 0;
+  background-color: rgb(41, 39, 46);
 }
-
-.Menu {
-  width: 245px;
-  height: 300px;
+.barWrapper img {
   position: relative;
-  background-color: #202020;
-  bottom: 312px;
+  height: 70%;
+  top: 15%;
+  left: 8px;
 }
-
-.MenuBar {
-  width: 205px;
+input {
+  position: relative;
+  width: 150px;
+  height: 25px;
+  bottom: 25px;
+  left: 40px;
+}
+.container {
+  position: absolute;
   height: 400px;
+  width: 300px;
+  bottom: 30px;
+  background-color: rgb(48, 46, 54);
+}
+.leftBar {
+  position: absolute;
+  width: 40px;
+  height: 400px;
+}
+.leftBar img {
+  position: relative;
+  width: 50%;
+  left: 25%;
+  padding-top: 10px;
+  z-index: 21;
+}
+.off {
+  position: inherit;
+  bottom: -30px;
+  z-index: 22;
+}
+.off img {
+  bottom: 30px;
+}
+.menu {
+  position: absolute;
+  width: 290px;
+  height: 400px;
+  bottom: 0;
+  left: 10px;
+  color: rgb(167, 167, 167);
+}
+.menuBar {
+  margin: 0;
+  height: 400px;
+}
+.menuBar img {
+  width: 53px;
+  height: 53px;
+}
+.menuBar span {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(167, 167, 167);
 }
 
 li:hover {
-  opacity: 0.8px;
-  background-color: #363636;
-  color: #fff;
-}
-
-.Refresh {
-  position: absolute;
-  bottom: 80%;
-  z-index: 2;
-  width: 20px;
-  height: 20px;
-  left: 5px;
-}
-
-.Burger {
-  position: absolute;
-  bottom: 880%;
-  left: 5px;
-  z-index: 2;
-  width: 20px;
-  height: 20px;
-}
-
-.LeftBar {
-  position: absolute;
-  z-index: 1;
-  width: 42px;
-  bottom: 35px;
-  background-color: #202020;
-  height: 300px;
-}
-
-.Off {
-  background-color: transparent;
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  z-index: 3;
-  bottom: 1px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li {
-  height: 38px;
-  padding-top: 5px;
-  padding-left: 50px;
-  font-size: 15px;
-}
-
-li img {
-  position: absolute;
-  left: 45px;
-  width: 30px;
-  height: 30px;
-}
-
-span {
-  position: relative;
-  top: 9px;
-}
-
-a {
-  color: grey;
-  text-decoration: none;
+  background-color: rgb(167, 167, 167);
+  color: black;
 }
 </style>
