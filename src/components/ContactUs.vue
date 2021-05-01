@@ -89,66 +89,68 @@ export default {
 
 <style scoped>
 * {
-box-sizing:border-box;
-z-index:3;
+  box-sizing: border-box;
+  z-index: 3;
 }
 
 label {
-float:left;
+  float: left;
 }
 
-input[type="text"],[type="email"],textarea {
-width:100%;
-border:1px solid #ccc;
-border-radius:4px;
-box-sizing:border-box;
-margin-top:6px;
-margin-bottom:16px;
-resize:none;
-padding:12px;
+input[type="text"],
+[type="email"],
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none;
+  padding: 12px;
 }
 
 input[type="submit"] {
-background-color:#2bae66ff;
-color:#FFF;
-border:none;
-border-radius:4px;
-cursor:pointer;
-padding:12px 20px;
+  background-color: #2bae66ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 12px 20px;
 }
 
 input[type="submit"]:hover {
-background-color:#195190ff;
+  background-color: #195190ff;
 }
 
 .container {
-display:block;
-text-align:center;
-border-radius:5px;
-background-color:#a2a2a1ff;
-width:30%;
-bottom:25%;
-position:absolute;
-left:30%;
-min-width:400px;
-box-shadow:0 3px 10px rgba(0, 0, 0, 0.8);
-margin:auto;
-padding:20px;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #a2a2a1ff;
+  width: 500px;
+  bottom: 25%;
+  position: absolute;
+  left: 30%;
+  min-width: 400px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+  margin: auto;
+  padding: 20px;
 }
 
 p {
-color:#000;
-font-size:12px;
-top:0;
-width:90%;
-font-weight:700;
+  color: #000;
+  font-size: 12px;
+  top: 0;
+  width: 90%;
+  font-weight: 700;
 }
 
 .exit {
-position:absolute;
-top:1%;
-left:93.5%;
-width:20px;
-height:20px;
+  position: absolute;
+  top: 1%;
+  left: 93.5%;
+  width: 20px;
+  height: 20px;
 }
 </style>

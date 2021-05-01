@@ -44,4 +44,56 @@ p {
   width: 120px;
   height: 147px;
 }
+
+@media screen and (max-width: 1200px) {
+  img {
+    width: 50px;
+    height: 50px;
+  }
+  .dex {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 110px;
+    height: 120px;
+  }
+  .contact {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 110px;
+    height: 120px;
+  }
+  .skills {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 110px;
+    height: 120px;
+  }
+  @media screen and (max-width: 768px) {
+img {
+    width: 35px;
+    height: 35px;
+  }
+  .dex {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 70px;
+    height: 80px;
+  }
+  .contact {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 70px;
+    height: 80px;
+  }
+  .skills {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 70px;
+    height: 80px;
+  }
+  p {
+  font-weight: 500;
+  font-size: 10px;
+  }
+}}
 </style>
