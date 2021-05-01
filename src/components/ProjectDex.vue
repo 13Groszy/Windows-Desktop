@@ -97,7 +97,8 @@ p {
   width: 500px;
   height: 400px;
   position: absolute;
-  left: 120px;
+  left: 30%;
+  top: 20%;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
 }

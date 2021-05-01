@@ -1,17 +1,17 @@
 <template lang="">
 <div id="BottomBar">
   <div class="barWrapper">
-  <img src="../assets/winlogo.png" @click="bar = 1" >
-  <form action="https://www.google.com/search"  method="get"  target="_blank">
-    <input  name="q" placeholder="Search in Google" type="text">
-  </form>
+    <img src="../assets/winlogo.png" @click="bar = 1" >
+    <form action="https://www.google.com/search"  method="get"  target="_blank">
+      <input  name="q" placeholder="Search in Google" type="text">
+    </form>
   </div>
   <div class="container" v-if="this.bar != 0">
     <div class="leftBar">
       <img class="Burger" src="../assets/burger.png" />
       <div class="off" @click="bar = 0" >
         <img class="Refresh" @click="bar = 0, $emit('closedex'),$emit('closecontactus'),$emit('closeskills'),$emit('closeWallet')" src="../assets/turnoff.png" />
-      </div>      
+      </div>
     </div>
     <div class="menu">
       <ul  class="menuBar">
@@ -19,7 +19,7 @@
         <li @click="$emit('opendex')"><img src="../assets/Mini/Documents.png"><span>Project Dex</span></li>
         <li @click="$emit('openskills')"><img src="../assets/Mini/Skills.png"><span>Skills</span></li>
         <li><img src="../assets/Mini/AboutMe.png"><span>About me</span></li>
-        <a href="http://github.com/13Groszy" target="_blank"><li><img src="../assets/Mini/github.png"><span>GitHub</span></li></a>        
+        <a href="http://github.com/13Groszy" target="_blank"><li><img src="../assets/Mini/github.png"><span>GitHub</span></li></a>
         <a href="https://www.pokexgames.com/#/home" target="_blank"><li><img src="../assets/Mini/PokeXGames.png"><span>PokeXGames</span></li></a>
         <li @click="$emit('openWallet')"><img src="../assets/Mini/FunnyCats.png"><span>APICOINS</span></li>
       </ul>
@@ -120,5 +120,64 @@ a {
 li:hover {
   background-color: rgb(167, 167, 167);
   color: black;
+}
+@media screen and (max-width: 1200px) {
+  .menu {
+    width: 200px;
+  }
+  .container {
+    width: 210px;
+  }
+  li {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    height: 100%;
+    width: 100%;
+    bottom: 30px;
+    background-color: rgb(48, 46, 54);
+  }
+  .leftBar {
+    width: 40px;
+    height: 100%;
+  }
+  .leftBar img {
+    width: 50%;
+    left: 25%;
+    padding-top: 40px;
+    z-index: 21;
+  }
+  .menu {
+    width: 100%;
+    height: 100%;
+    left: 20px;
+  }
+  .menuBar {
+    margin: 0;
+    height: 100%;
+    position: absolute;
+    bottom: -40px;
+  }
+  li {
+    height: 13%;
+    width: 100%;
+  }
+  .menuBar img {
+    width: 20%;
+    height: 80%;
+    bottom: 10px;
+    top: 10px;
+  }
+
+  .menuBar span {
+    left: 10%;
+    top: -20px;
+    font-size: 15px;
+  }
+  li:hover {
+    background-color: rgb(48, 46, 54);
+  }
 }
 </style>

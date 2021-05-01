@@ -95,8 +95,8 @@ export default {
   height: 300px;
   background-color: #f1ece5;
   position: absolute;
-  left: 200px;
-  top: 100px;
+  left: 30%;
+  top: 30%;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
   z-index: 25;
