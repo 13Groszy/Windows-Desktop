@@ -153,4 +153,63 @@ p {
   width: 20px;
   height: 20px;
 }
+@media screen and (max-width: 1200px) {
+  .container {
+    height: 70vh;
+    bottom: 15vh;
+  }
+  .exit {
+    top: 5%;
+  }
+  form {
+    position: absolute;
+    top: 10%;
+  }
+  input[type="text"],
+  [type="email"],
+  textarea {
+    width: 90%;
+    box-sizing: border-box;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  p {
+    font-size: 18px;
+  }
+  label {
+    font-size: 18px;
+    font-weight: bolder;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    width: 50%;
+    height: 130%;
+    left: 0;
+    bottom: -30%;
+    z-index: 23;
+  }
+  .exit {
+    top: 3%;
+  }
+  input[type="text"],
+  [type="email"],
+  textarea {
+    width: 90%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 5%;
+  }
+  form {
+    position: absolute;
+    top: 10%;
+  }
+  p {
+    font-size: 25px;
+  }
+  label {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+}
 </style>
