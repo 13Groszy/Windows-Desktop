@@ -98,12 +98,6 @@ p {
   position: absolute;
 }
 
-.bar img {
-  width: 30px;
-  height: 20.5px;
-  object-position: right top;
-  border-radius: 1px 2px 3px 0;
-}
 
 .topBar {
   background-color: #a2a2a1ff;
@@ -153,5 +147,40 @@ hr {
   position: relative;
   top: 0;
   left: 100%;
+}
+@media screen and (max-width: 767px) {
+p {
+  all:unset;
+}
+
+.outerWrapper {
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.bar {
+  width: 50vw;
+  height: 20px;
+}
+
+.topBar {
+  width: 92vw;
+}
+.topic img {
+  width: 30px;
+  height: 30px;
+  left: 0;
+  margin: 10px 20px 0;
+}
+
+hr {
+  margin: 2vw 5vw 0;
+}
+.topic{
+  width: 80vw;
+  margin-left:10vw;
+}
 }
 </style>
