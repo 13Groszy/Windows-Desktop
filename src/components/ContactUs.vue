@@ -183,7 +183,7 @@ p {
 }
 @media screen and (max-width: 767px) {
   .container {
-    width: 50%;
+    width: 100vw;
     height: 130%;
     left: 0;
     bottom: -30%;
@@ -196,13 +196,15 @@ p {
   [type="email"],
   textarea {
     width: 90%;
-    margin-left: 0%;
-    margin-right: 0%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 5%;
   }
   form {
     position: absolute;
     top: 10%;
+    width: 80vw;
+    left:10vw;
   }
   p {
     font-size: 25px;

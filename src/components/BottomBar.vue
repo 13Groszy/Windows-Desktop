@@ -133,7 +133,7 @@ li:hover {
     font-size: 10px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .container {
     height: 100%;
     width: 100%;

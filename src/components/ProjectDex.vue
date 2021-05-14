@@ -166,4 +166,10 @@ p {
   top: 0;
   left: 100%;
 }
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 767px) {
+
+}
 </style>
