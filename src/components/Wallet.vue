@@ -159,4 +159,31 @@ p {
 img :target {
   background-color: #85bb65;
 }
+@media screen and (max-width: 767px) {
+  .outerWrapper {
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    min-width: 330px;
+  }
+  .coins {
+    position: absolute;
+    top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .coins img {
+    width: 10%;
+    height: 50px;
+    margin: auto 4.7%;
+    border: 1px solid black;
+  }
+  button {
+    top: 50%;
+  }
+  p {
+    bottom: 20%;
+  }
+}
 </style>
