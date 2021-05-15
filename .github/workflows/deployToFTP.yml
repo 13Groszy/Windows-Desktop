@@ -1,0 +1,28 @@
+on: push
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2.3.2
+      
+    - name: 🔨 Build Project
+      run: |
+        npm install
+        npm run build
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: 13groszy.96.lt
+        username: u851723318	
+        password: a8NIjJeo[;
+        local-dir: dist/
+        server-dir: ./
+        exclude: .git*
+          - .git*/**
+          -  **/.git*/**
+          - node_modules/**
+          - node_modules/**/*
