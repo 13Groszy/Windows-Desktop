@@ -3,7 +3,7 @@
   <div class="barWrapper">
     <img src="../assets/winlogo.png" @click="bar = 1" >
     <form action="https://www.google.com/search"  method="get"  target="_blank">
-      <input  name="q" placeholder="Search in Google" type="text">
+      <input  name="q" placeholder="Search in Google" onfocus="this.value=''" type="text">
     </form>
   </div>
   <div class="container" v-if="this.bar != 0">
@@ -127,17 +127,19 @@ li:hover {
   }
   .container {
     width: 210px;
+    overflow: hidden;
   }
   li {
     font-size: 10px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .container {
     height: 100%;
     width: 100%;
     bottom: 30px;
     background-color: rgb(48, 46, 54);
+    overflow: hidden;
   }
   .leftBar {
     width: 40px;

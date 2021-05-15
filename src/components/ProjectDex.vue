@@ -166,4 +166,41 @@ p {
   top: 0;
   left: 100%;
 }
+@media screen and (max-width: 767px) {
+  .outerWrapper {
+    background: #111;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 25;
+  }
+  .container img {
+    width: 80vw;
+    top: 20vh;
+    left: 10vw;
+  }
+  .topBar {
+    width: 100vw;
+  }
+  .exitBar {
+    background-color: rgb(121, 121, 121);
+    width: 90vw;
+  }
+  .exitBar img {
+    width: 10vw;
+  }
+  .container {
+    background-color: #111;
+  }
+  .container p {
+    width: 80vw;
+    left: 10vw;
+    color: white;
+    top: -40vh;
+  }
+  .topic p:last-of-type {
+    left: 10vw;
+  }
+}
 </style>

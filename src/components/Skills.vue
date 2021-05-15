@@ -13,10 +13,12 @@
             <hr>
           <h1>Languages</h1>
             <p>HTML, CSS and JavaScript are 'must have' to become FrontEnd Developer so I put the greatest emphasis on knowing them</p>
+            <hr class="imgHr">
               <img src="../assets/Mini/HTML.png"> <img src="../assets/Mini/CSS.png"> <img src="../assets/Mini/JS.png">
               <hr>
           <h1>Frameworks</h1>
             <p>Vue.js is the only one framework which I am learning so far and my next step is get to know libraries like Vuex or Vue-Router</p>
+            <hr class="imgHr">
               <img src="../assets/Mini/VueJs.png">
               <hr>
           <h1>Others</h1>
@@ -98,13 +100,6 @@ p {
   position: absolute;
 }
 
-.bar img {
-  width: 30px;
-  height: 20.5px;
-  object-position: right top;
-  border-radius: 1px 2px 3px 0;
-}
-
 .topBar {
   background-color: #a2a2a1ff;
   width: 470px;
@@ -150,8 +145,52 @@ hr {
 .topBar img {
   height: 20px;
   width: 30px;
-  position: relative;
+  position: absolute;
   top: 0;
-  left: 100%;
+  right: 0;
+}
+@media screen and (max-width: 767px) {
+  p {
+    all: unset;
+  }
+  .outerWrapper {
+    width: 100%;
+    min-width: 300px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .bar {
+    left: 10px;
+    width: 100%;
+    height: 20px;
+  }
+
+  .topBar {
+    width: 100vw;
+    min-width: 270px;
+  }
+  .topic img {
+    width: 30px;
+    height: 30px;
+    left: 0;
+    margin: 10px 20px 0;
+  }
+
+  hr {
+    margin: 2vw 5vw 0;
+  }
+  .topic {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .imgHr {
+    border: 1px solid transparent;
+    height: 0px;
+  }
 }
 </style>

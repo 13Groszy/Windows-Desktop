@@ -75,4 +75,13 @@ label {
   -ms-user-select: none;
   user-select: none;
 }
+@media screen and (max-width: 1200px) {
+body{
+  background: url("./assets/homepageTo1200.png") no-repeat center center fixed;
+  background-size: 60%;
+  background-color: #000;
+  background-position-x: 90%;
+  background-position-y: 5%;
+}
+}
 </style>
