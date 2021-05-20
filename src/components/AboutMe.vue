@@ -1,40 +1,36 @@
-<template lang="">
-    <div id="Skills">
-     <div class="outerWrapper" ref="draggableContainer"  id="draggable-container">
-        <div class="bar" id="draggable-header" @mousedown="dragMouseDown">
-          <p>Skills.html</p>
-        </div>
-        <div class="topBar">
-          <img src="../assets/exit.png" @click="$emit('closeskills')">
-        </div>
-        <div class="topic">
-          <h1>Skills</h1>
-            <p>By writing 'skills' I understand languages or frameworks in which I feel good about or which I am learning</p>
-            <hr>
-          <h1>Languages</h1>
-            <p>HTML, CSS and JavaScript are 'must have' to become FrontEnd Developer so I put the greatest emphasis on knowing them</p>
-            <hr class="imgHr">
-              <img src="../assets/Mini/HTML.png"> <img src="../assets/Mini/CSS.png"> <img src="../assets/Mini/JS.png">
-              <hr>
-          <h1>Frameworks</h1>
-            <p>Vue.js is the only one framework which I am learning so far and my next step is get to know libraries like Vuex or Vue-Router</p>
-            <hr class="imgHr">
-              <img src="../assets/Mini/VueJs.png">
-              <hr>
-          <h1>Others</h1>
-            <img src="../assets/Mini/GIT.png"><img src="../assets/Mini/MediaQuery.jpg">
-          <p></p>
-        </div>
+<template>
+  <div id="aboutMe">
+    <div class="outerWrapper" ref="draggableContainer" id="draggable-container">
+      <div class="topBar" id="draggable-header" @mousedown="dragMouseDown">
+        <span>AboutMe.cv</span>
+        <img
+          class="exit"
+          src="../assets/exit.png"
+          @click="$emit('closeaboutMe')"
+        />
+      </div>
+      <div class="container">
+        <img src="../assets/aboutme.png" />
+        <h1>Hello!</h1>
+        <p>
+          My name is Mateusz and I live in Yeovil, small town in United Kingdom.
+          <br />
+          After discovering many paths of working with the code I can finally
+          call myself a self-taught web developer which focus mainly on front
+          end. <br />
+          My target in creating websites is keen on details, being original,
+          thinking outside of the box as you can observe it on this website.
+        </p>
       </div>
     </div>
+  </div>
 </template>
 <script>
 export default {
-  name: "Skills",
+  name: "aboutMe",
   components: {},
   data: function () {
     return {
-      skill: 0,
       positions: {
         clientX: undefined,
         clientY: undefined,
@@ -73,16 +69,9 @@ export default {
   },
 };
 </script>
-
 <style scoped>
-* {
-  z-index: 13;
-}
-p {
-  position: relative;
-}
-
 .outerWrapper {
+  z-index: 23;
   background: #b5bdc8;
   background: -moz-linear-gradient(
     45deg,
@@ -107,6 +96,21 @@ p {
   top: 20%;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15%;
+  justify-content: center;
+}
+h1 {
+  width: 100%;
+  margin-left: 30%;
+}
+p {
+  margin-left: 30%;
+  margin-right: 10%;
+  font-size: 18px;
 }
 
 .bar {
@@ -160,42 +164,9 @@ p {
   width: 470px;
   height: 20px;
 }
-
-.outerWrapper p {
-  left: 7px;
-  top: -10px;
-  font-size: 14px;
-  font-weight: 100;
-  color: #000;
-}
-
-.topic {
-  text-align: center;
-}
-
-.topic p {
-  width: 450px;
-  top: 10px;
-  left: 20px;
-  font-size: 14px;
-  color: #000;
-  margin: 7px;
-}
-
-h1 {
-  margin: 7px;
-  font-size: 24px;
-}
-
-.topic img {
-  width: 30px;
-  height: 30px;
-  left: 0;
-  margin: 10px 20px 0;
-}
-
-hr {
-  margin: 10px 25px 0;
+img {
+  width: 30%;
+  position: absolute;
 }
 .topBar img {
   height: 20px;
@@ -204,49 +175,21 @@ hr {
   top: 0;
   right: 0;
 }
+span {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
 @media screen and (max-width: 767px) {
-  p {
-    all: unset;
-  }
   .outerWrapper {
-    width: 100%;
-    min-width: 300px;
+    min-width: 240px;
+    width: 100vw;
     height: 100vh;
     left: 0;
     top: 0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    z-index: 23;
   }
-  .bar {
-    left: 10px;
-    width: 100%;
-    height: 20px;
-  }
-
   .topBar {
-    width: 100vw;
-    min-width: 270px;
-  }
-  .topic img {
-    width: 30px;
-    height: 30px;
-    left: 0;
-    margin: 10px 20px 0;
-  }
-
-  hr {
-    margin: 2vw 5vw 0;
-  }
-  .topic {
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .imgHr {
-    border: 1px solid transparent;
-    height: 0px;
+    width: 100%;
   }
 }
 </style>

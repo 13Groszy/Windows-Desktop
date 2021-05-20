@@ -10,7 +10,7 @@
     <div class="leftBar">
       <img class="Burger" src="../assets/burger.png" />
       <div class="off" @click="bar = 0" >
-        <img class="Refresh" @click="bar = 0, $emit('closedex'),$emit('closecontactus'),$emit('closeskills'),$emit('closeWallet')" src="../assets/turnoff.png" />
+        <img class="Refresh" @click="bar = 0, $emit('closedex'),$emit('closecontactus'),$emit('closeskills'),$emit('closeaboutMe'),$emit('closeWallet')" src="../assets/turnoff.png" />
       </div>
     </div>
     <div class="menu">
@@ -18,7 +18,7 @@
         <li @click="$emit('opencontactUs')"><img src="../assets/Mini/ContactMe.png"><span>Contact</span></li>
         <li @click="$emit('opendex')"><img src="../assets/Mini/Documents.png"><span>Project Dex</span></li>
         <li @click="$emit('openskills')"><img src="../assets/Mini/Skills.png"><span>Skills</span></li>
-        <li><img src="../assets/Mini/AboutMe.png"><span>About me</span></li>
+        <li @click="$emit('openaboutMe')"><img src="../assets/Mini/AboutMe.png"><span>About me</span></li>
         <a href="http://github.com/13Groszy" target="_blank"><li><img src="../assets/Mini/github.png"><span>GitHub</span></li></a>
         <a href="https://www.pokexgames.com/#/home" target="_blank"><li><img src="../assets/Mini/PokeXGames.png"><span>PokeXGames</span></li></a>
         <li @click="$emit('openWallet')"><img src="../assets/Mini/FunnyCats.png"><span>APICOINS</span></li>

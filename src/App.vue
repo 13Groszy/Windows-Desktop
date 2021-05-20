@@ -10,15 +10,18 @@
     />
     <GitHub @openGH="GH = true" />
     <Wallet v-if="wallet" @closeWallet="wallet = false" />
+    <AboutMe v-if="aboutMe" @closeaboutMe="aboutMe = false" />
     <Bottom-Bar
       @openWallet="wallet = true"
       @opencontactUs="contactUs = true"
       @openskills="skills = true"
       @opendex="dex = true"
+      @openaboutMe="aboutMe = true"
       @closedex="dex = false"
       @closecontactus="contactUs = false"
       @closeskills="skills = false"
       @closeWallet="wallet = false"
+      @closeaboutMe="aboutMe = false"
     />
   </div>
 </template>
@@ -31,6 +34,7 @@ import Wallet from "./components/Wallet.vue";
 import ContactUs from "./components/ContactUs.vue";
 import GitHub from "./components/GitHub.vue";
 import Desktop from "./components/Desktop.vue";
+import AboutMe from './components/AboutMe.vue';
 
 export default {
   name: "App",
@@ -42,6 +46,7 @@ export default {
     ContactUs,
     GitHub,
     Desktop,
+    AboutMe,
   },
   data() {
     return {
@@ -49,6 +54,7 @@ export default {
       contactUs: false,
       skills: false,
       dex: false,
+      aboutMe: false,
     };
   },
 };
@@ -76,12 +82,12 @@ label {
   user-select: none;
 }
 @media screen and (max-width: 1200px) {
-body{
-  background: url("./assets/homepageTo1200.png") no-repeat center center fixed;
-  background-size: 60%;
-  background-color: #000;
-  background-position-x: 90%;
-  background-position-y: 5%;
-}
+  body {
+    background: url("./assets/homepageTo1200.png") no-repeat center center fixed;
+    background-size: 60%;
+    background-color: #000;
+    background-position-x: 90%;
+    background-position-y: 5%;
+  }
 }
 </style>
