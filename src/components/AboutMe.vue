@@ -187,6 +187,7 @@ span {
     height: 100vh;
     left: 0;
     top: 0;
+    overflow:hidden;
   }
   .topBar {
     width: 100%;
