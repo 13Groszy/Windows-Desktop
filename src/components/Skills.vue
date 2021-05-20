@@ -162,6 +162,7 @@ hr {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    z-index: 23;
   }
   .bar {
     left: 10px;
