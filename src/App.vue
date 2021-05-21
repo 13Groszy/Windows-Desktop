@@ -34,7 +34,7 @@ import Wallet from "./components/Wallet.vue";
 import ContactUs from "./components/ContactUs.vue";
 import GitHub from "./components/GitHub.vue";
 import Desktop from "./components/Desktop.vue";
-import AboutMe from './components/AboutMe.vue';
+import AboutMe from "./components/AboutMe.vue";
 
 export default {
   name: "App",
@@ -80,6 +80,9 @@ label {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+h1 {
+  color: transparent;
 }
 @media screen and (max-width: 1200px) {
   body {

@@ -7,6 +7,7 @@
             class="exit"
             src="../assets/xbutton.png"
             @click="$emit('closecontactus')"
+            alt="Exit"
           />
           <p>
             If you are happy to contact me, use the form below and I promise to

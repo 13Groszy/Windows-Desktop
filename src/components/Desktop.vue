@@ -1,15 +1,15 @@
 <template>
   <div id="Desktop">
     <div class="dex">
-      <img src="../assets/ProjectDexLogo.png" @click="$emit('opendex')" />
+      <img src="../assets/ProjectDexLogo.png" alt="ProjectDex" @click="$emit('opendex')" />
       <p>Project Dex</p>
     </div>
     <div class="contact">
-      <img src="../assets/mailbox.png" @click="$emit('opencontactUs')" />
+      <img src="../assets/mailbox.png" alt="Contact Me" @click="$emit('opencontactUs')" />
       <p>Email Me</p>
     </div>
     <div class="skills">
-      <img src="../assets/Skills.png" @click="$emit('openskills')" />
+      <img src="../assets/Skills.png" alt="Skills" @click="$emit('openskills')" />
       <p>Skills</p>
     </div>
   </div>

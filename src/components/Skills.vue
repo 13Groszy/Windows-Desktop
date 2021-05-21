@@ -5,7 +5,7 @@
           <p>Skills.html</p>
         </div>
         <div class="topBar">
-          <img src="../assets/exit.png" @click="$emit('closeskills')">
+          <img src="../assets/exit.png" alt="Exit" @click="$emit('closeskills')">
         </div>
         <div class="topic">
           <h1>Skills</h1>
@@ -14,15 +14,15 @@
           <h1>Languages</h1>
             <p>HTML, CSS and JavaScript are 'must have' to become FrontEnd Developer so I put the greatest emphasis on knowing them</p>
             <hr class="imgHr">
-              <img src="../assets/Mini/HTML.png"> <img src="../assets/Mini/CSS.png"> <img src="../assets/Mini/JS.png">
+              <img src="../assets/Mini/HTML.png" alt="HTML"> <img src="../assets/Mini/CSS.png" alt="CSS"> <img src="../assets/Mini/JS.png" alt="JS">
               <hr>
           <h1>Frameworks</h1>
             <p>Vue.js is the only one framework which I am learning so far and my next step is get to know libraries like Vuex or Vue-Router</p>
             <hr class="imgHr">
-              <img src="../assets/Mini/VueJs.png">
+              <img src="../assets/Mini/VueJs.png" alt="VueJs">
               <hr>
           <h1>Others</h1>
-            <img src="../assets/Mini/GIT.png"><img src="../assets/Mini/MediaQuery.jpg">
+            <img src="../assets/Mini/GIT.png" alt="GIT"><img src="../assets/Mini/MediaQuery.jpg" alt="MediaQuery">
           <p></p>
         </div>
       </div>
