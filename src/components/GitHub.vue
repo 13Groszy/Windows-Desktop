@@ -1,7 +1,7 @@
 <template>
   <div id="GitHub">
     <a href="http://github.com/13Groszy" target="_blank">
-      <img src="../assets/GitHub.png" />
+      <img src="../assets/GitHub.png" alt="GitHub" />
     </a>
     <p>GitHub</p>
   </div>

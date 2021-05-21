@@ -3,15 +3,15 @@
       <div class="outerWrapper" ref="draggableContainer"  id="draggable-container">
         <div class="topBar" id="draggable-header" @mousedown="dragMouseDown">
           <span>ApiCoins.txt</span>
-          <img class="exit" src="../assets/exit.png" @click="$emit('closeWallet')">
+          <img class="exit" alt="Exit" src="../assets/exit.png" @click="$emit('closeWallet')">
         </div>
         <div class="coins">
           <h2>Choose coin and check info about it</h2>
-          <img src="../assets/cryp/btc.png" @click="coinId = '1'">
-          <img src="../assets/cryp/eth.png" @click="coinId = '2'">
-          <img src="../assets/cryp/polka.png" @click="coinId = '71983'">
-          <img src="../assets/cryp/ltc.png" @click="coinId = '7'">
-          <img src="../assets/cryp/uni.png" @click="coinId = '72821'">
+          <img src="../assets/cryp/btc.png" alt="Bitcoin" @click="coinId = '1'">
+          <img src="../assets/cryp/eth.png" alt="Ethereum" @click="coinId = '2'">
+          <img src="../assets/cryp/polka.png" alt="Polkadot" @click="coinId = '71983'">
+          <img src="../assets/cryp/ltc.png" alt="Litecoin" @click="coinId = '7'">
+          <img src="../assets/cryp/uni.png" alt="Uniswap" @click="coinId = '72821'">
         </div>
         <button class="API" @click = "fetchAPIData">Check!</button>
         <p v-if=this.coin >{{result}}</p>

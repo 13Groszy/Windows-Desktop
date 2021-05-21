@@ -7,10 +7,11 @@
           class="exit"
           src="../assets/exit.png"
           @click="$emit('closeaboutMe')"
+          alt="Exit"
         />
       </div>
       <div class="container">
-        <img src="../assets/aboutme.png" />
+        <img src="../assets/aboutme.png" alt="About Me" />
         <h1>Hello!</h1>
         <p>
           My name is Mateusz and I live in Yeovil, small town in United Kingdom.

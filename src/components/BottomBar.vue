@@ -1,27 +1,27 @@
 <template lang="">
 <div id="BottomBar">
   <div class="barWrapper">
-    <img src="../assets/winlogo.png" @click="bar = 1" >
+    <img src="../assets/winlogo.png" alt="Start" @click="bar = 1" >
     <form action="https://www.google.com/search"  method="get"  target="_blank">
       <input  name="q" placeholder="Search in Google" onfocus="this.value=''" type="text">
     </form>
   </div>
   <div class="container" v-if="this.bar != 0">
     <div class="leftBar">
-      <img class="Burger" src="../assets/burger.png" />
+      <img class="Burger" src="../assets/burger.png" alt="Burger logo" />
       <div class="off" @click="bar = 0" >
-        <img class="Refresh" @click="bar = 0, $emit('closedex'),$emit('closecontactus'),$emit('closeskills'),$emit('closeaboutMe'),$emit('closeWallet')" src="../assets/turnoff.png" />
+        <img class="Refresh" alt="Turn off" @click="bar = 0, $emit('closedex'),$emit('closecontactus'),$emit('closeskills'),$emit('closeaboutMe'),$emit('closeWallet')" src="../assets/turnoff.png" />
       </div>
     </div>
     <div class="menu">
       <ul  class="menuBar">
-        <li @click="$emit('opencontactUs')"><img src="../assets/Mini/ContactMe.png"><span>Contact</span></li>
-        <li @click="$emit('opendex')"><img src="../assets/Mini/Documents.png"><span>Project Dex</span></li>
-        <li @click="$emit('openskills')"><img src="../assets/Mini/Skills.png"><span>Skills</span></li>
-        <li @click="$emit('openaboutMe')"><img src="../assets/Mini/AboutMe.png"><span>About me</span></li>
-        <a href="http://github.com/13Groszy" target="_blank"><li><img src="../assets/Mini/github.png"><span>GitHub</span></li></a>
-        <a href="https://www.pokexgames.com/#/home" target="_blank"><li><img src="../assets/Mini/PokeXGames.png"><span>PokeXGames</span></li></a>
-        <li @click="$emit('openWallet')"><img src="../assets/Mini/FunnyCats.png"><span>APICOINS</span></li>
+        <li @click="$emit('opencontactUs')"><img src="../assets/Mini/ContactMe.png" alt="Contact Me"><span>Contact</span></li>
+        <li @click="$emit('opendex')"><img src="../assets/Mini/Documents.png" alt="Project Dex"><span>Project Dex</span></li>
+        <li @click="$emit('openskills')"><img src="../assets/Mini/Skills.png" alt="Skills"><span>Skills</span></li>
+        <li @click="$emit('openaboutMe')"><img src="../assets/Mini/AboutMe.png" alt="About Me"><span>About me</span></li>
+        <a href="http://github.com/13Groszy" target="_blank"><li><img src="../assets/Mini/github.png" alt="GitHub"><span>GitHub</span></li></a>
+        <a href="https://www.pokexgames.com/#/home" target="_blank"><li><img src="../assets/Mini/PokeXGames.png" alt="PokeXGames"><span>PokeXGames</span></li></a>
+        <li @click="$emit('openWallet')"><img src="../assets/Mini/FunnyCats.png" alt="Coin price checker"><span>APICOINS</span></li>
       </ul>
     </div>
   </div>

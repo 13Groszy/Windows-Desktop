@@ -4,10 +4,10 @@
         <div class="topBar" id="draggable-header" @mousedown="dragMouseDown">
           <p>ProjectsIHaveDoneSoFar.exe</p>
         </div>
-        <div class="exitBar"><img src="../assets/exit.png" @click="$emit('closedex')"></div>
+        <div class="exitBar"><img src="../assets/exit.png" alt="Exit" @click="$emit('closedex')"></div>
         <div class="topic">
           <div class="container">
-            <img src="../assets/portfolio.png">
+            <img src="../assets/portfolio.png" alt="Portfolio image">
             <p>My biggest project so far is this webpage and I use it as my portfolio.</p>
             <p>Other projects, mainly done with tutorials, you can find at my GitHub repo.</p>
           </div>
