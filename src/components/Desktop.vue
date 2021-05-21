@@ -2,15 +2,15 @@
   <div id="Desktop">
     <div class="dex">
       <img src="../assets/ProjectDexLogo.png" alt="ProjectDex" @click="$emit('opendex')" />
-      <p>Project Dex</p>
+      <h1>Project Dex</h1>
     </div>
     <div class="contact">
       <img src="../assets/mailbox.png" alt="Contact Me" @click="$emit('opencontactUs')" />
-      <p>Email Me</p>
+      <h1>Email Me</h1>
     </div>
     <div class="skills">
       <img src="../assets/Skills.png" alt="Skills" @click="$emit('openskills')" />
-      <p>Skills</p>
+      <h1>Skills</h1>
     </div>
   </div>
 </template>
@@ -26,7 +26,7 @@ img {
   width: 80px;
   height: 80px;
 }
-p {
+h1 {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
@@ -91,7 +91,7 @@ img {
     width: 70px;
     height: 80px;
   }
-  p {
+  h1 {
   font-weight: 500;
   font-size: 10px;
   }
