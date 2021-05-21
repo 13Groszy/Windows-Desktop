@@ -3,7 +3,7 @@
     <a href="http://github.com/13Groszy" target="_blank">
       <img src="../assets/GitHub.png" alt="GitHub" />
     </a>
-    <p>GitHub</p>
+    <h1>GitHub</h1>
   </div>
 </template>
 
@@ -22,12 +22,12 @@ img {
   height: 80px;
 }
 
-p {
+h1 {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
   left: 7px;
-  top: -18px;
+  top: -12px;
   position: relative;
 }
 @media screen and (max-width: 1200px) {
@@ -39,7 +39,7 @@ p {
     left: 47px;
     margin-top: 20px;
   }
-  p {
+  h1 {
     left: -9px;
   }
 }
@@ -52,7 +52,7 @@ p {
     left: 27px;
     margin-top: 10px;
   }
-  p {
+  h1 {
     left: 2px;
     top:-8px;
     font-weight: 500;
