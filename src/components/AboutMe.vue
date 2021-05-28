@@ -17,10 +17,10 @@
           My name is Mateusz and I live in Yeovil, small town in United Kingdom.
           <br />
           After discovering many paths of working with the code I can finally
-          call myself a self-taught web developer which focus mainly on front
+          call myself a self-taught web developer who focus mainly on front
           end. <br />
-          My target in creating websites is keen on details, being original,
-          thinking outside of the box as you can observe it on this website.
+          My target in creating websites is keen on details, being original and
+          thinking outside of the box what you can see on this website.
         </p>
       </div>
     </div>
