@@ -8,8 +8,8 @@
         <div class="topic">
           <div class="container">
             <img src="../assets/portfolio.png" alt="Portfolio image">
-            <p>My biggest project so far is this webpage and I use it as my portfolio.</p>
-            <p>Other projects, mainly done with tutorials, you can find at my GitHub repo.</p>
+            <p>My first project is this Windows looks like desktop webpage.</p>
+            <p>Other projects, you can easily find at my GitHub repo.</p>
           </div>
         </div>
       </div>
