@@ -6,7 +6,7 @@
     </div>
     <div class="contact">
       <img src="../assets/mailbox.png" alt="Contact Me" @click="$emit('opencontactUs')" />
-      <h1>Email Me</h1>
+      <h1>Contact Me</h1>
     </div>
     <div class="skills">
       <img src="../assets/Skills.png" alt="Skills" @click="$emit('openskills')" />
